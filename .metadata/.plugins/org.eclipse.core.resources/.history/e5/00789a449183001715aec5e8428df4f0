@@ -1,0 +1,17 @@
+package com.leandroserra.regra.de.negocio;
+
+public class Fase2 implements IFase {
+
+	@Override
+	public int qtdDeAcertos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int bonus() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

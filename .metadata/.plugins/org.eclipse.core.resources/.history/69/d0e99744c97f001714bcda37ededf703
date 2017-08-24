@@ -1,0 +1,5 @@
+package com.leandroserra.tarefa;
+
+interface IEmbaralhador {
+
+}

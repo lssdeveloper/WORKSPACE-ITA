@@ -1,0 +1,24 @@
+package com.leandroserra.teste;
+
+import static org.junit.Assert.*;
+
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.leandroserra.tarefa.EmbaralhadorAleatorio;
+
+public class TesteEmbaralhadorAleatorio {
+	
+	@Before
+	public void iniciar(){
+		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+		ea.embaralhadorDePalavra("Araruama");
+	}
+	
+	@Test
+	public void embaralhadorDePalavra() {
+		assertNotEquals("Araruama", "");
+	}
+
+}

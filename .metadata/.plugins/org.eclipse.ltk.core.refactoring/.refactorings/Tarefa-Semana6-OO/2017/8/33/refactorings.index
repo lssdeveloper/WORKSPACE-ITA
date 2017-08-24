@@ -1,0 +1,116 @@
+1502588954023	Delete element
+1502589549630	Delete element
+1502844273302	Delete element
+1502844358569	Rename package 'Embaralhador'
+1502844431367	Rename type 'EmbaralharReverse'
+1502844498228	Rename type 'EmbaralharShuffle'
+1502844534398	Rename package 'fabricas'
+1502844566030	Rename package 'com.leandroserra.factory'
+1502844788427	Rename package 'com.leandroserra.embaralhador'
+1502844872226	Rename package 'main'
+1502845102843	Rename package 'logica'
+1502845111554	Move compilation unit
+1502845117565	Delete element
+1502845128316	Move compilation unit
+1502845133242	Delete element
+1502845157417	Rename resource 'artefatos'
+1502845208628	Move file
+1502845212365	Move file
+1502845225916	Delete element
+1502845543386	Rename type 'TestesEmbaralharReverse'
+1502845601253	Rename method 'EmbaralharPalavra'
+1502845632100	Rename local variable 'lista'
+1502845736796	Rename method 'ObterDificuldade'
+1502845912788	Rename local variable 'lista'
+1502846166407	Rename field 'ListaEmbaralhadores'
+1502846540289	Rename method 'RetornarUmEmbaralhadorAleatoriamente'
+1502846724964	Rename field 'ListaMecanicaDoJogo'
+1502846827702	Rename method 'RetornarUmEmbaralhadorAleatoriamente'
+1502850173318	Rename type 'EmbaralharAleatorio'
+1502850190514	Rename type 'EmbaralharInverso'
+1502850262087	Rename method 'embaralharPalavra'
+1502850411369	Rename type 'LerArquivo'
+1502850458886	Rename field 'ListaDePalavras'
+1502850502576	Rename type 'LeitorDeArquivo'
+1502850748460	Rename type 'LeitorDeArquivoDePalavras'
+1502850880462	Rename field 'lstDePalavras'
+1502851041654	Rename resource 'arquivos'
+1502852235702	Rename field '_embaralhador'
+1502852248986	Rename field '_bancoDePalavras'
+1502852270637	Rename field '_palavraAtual'
+1502852341586	Rename field 'palavraAtual'
+1502852355596	Rename field '_jogoAcabou'
+1502852392571	Rename field '_podeTentarNovamente'
+1502852404655	Rename field 'fimDoJogo'
+1502852447958	Rename field '_acertou'
+1502852474565	Rename field '_pontos'
+1502852537636	Rename field '_quantidadeDePalavras'
+1502852561303	Rename field '_contadorDePalavras'
+1502852677234	Rename method 'RegraQuantidadeDePalavras'
+1502852828817	Rename method 'JogoAcabou'
+1502852916709	Rename local variable 'Resposta'
+1502852947331	Rename method 'ObterPontuacaoFinal'
+1502853007589	Rename method 'PodeTentarNovamente'
+1502853028254	Rename method 'isPontuacao'
+1502853077493	Rename method 'RetornarPalavraEmbaralhada'
+1502853142728	Rename method 'Regras'
+1502853161819	Rename method 'RezetarInformacoesPorPalavras'
+1502853184181	Rename method 'AdicionarPontuacao'
+1502854089524	Rename method 'UsuarioAcertouPalavra'
+1502854100168	Rename local variable 'Resposta'
+1502854180725	Rename field '_quantidadeDeErrorPorPalavra'
+1502854215429	Rename field '_contadorQuantidadeDeErrorPorPalavra'
+1502854263381	Rename field '_quantidadeDeErrosPermitidos'
+1502854307434	Rename field '_contadorQuantidadeDeErrorsPermitidos'
+1502854323225	Rename field 'permitidoErrar'
+1502854436317	Rename local variable 'Resposta'
+1502854549958	Rename method 'AumentarContadorDePalavras'
+1502854605220	Rename method 'ObterContadorDePalavras'
+1502854663501	Rename method 'pontuacao'
+1502854719947	Rename method 'isFimDeJogo'
+1502854750455	Rename method 'isAssertPalavra'
+1502854779776	Rename method 'isNovaTentativa'
+1502854853967	Rename field 'palavraJogando'
+1502854921611	Rename method 'palavraEmbaralhada'
+1502854948608	Rename method 'palavraNoJogo'
+1502854962224	Rename method 'logicaDoJogo'
+1502854995203	Rename method 'reset'
+1502855051278	Rename method 'somaPontuacao'
+1502857130678	Rename local variable 'regras'
+1502857237644	Rename method 'AtualizarJogoAcabou'
+1502857298914	Rename method 'fimDeJogo'
+1502857531100	Rename local variable 'comoJogar'
+1502857612327	Rename local variable 'logica'
+1502857993375	Rename method 'AumentarContadorQuantidadeDeErrorPorPalavra'
+1502858129848	Rename method 'AtualizarPodeTentarNovamente'
+1502858181799	Rename method 'AumentarContadorQuantidadeDeErrorsPermitidos'
+1502858195076	Rename method 'incrementarCountPermitidoErras'
+1502858296901	Rename method 'ObterContadorQuantidadeDeErrorPorPalavra'
+1502858327382	Rename method 'ObterContadorQuantidadeDeErrorsPermitidos'
+1502858367822	Rename method 'RegraQuantidadeDeErrorPorPalavra'
+1502858397206	Rename method 'RegraQuantidadeDeErrosPermitidos'
+1502858482868	Move compilation unit
+1502858512949	Move compilation unit
+1502858534981	Move compilation unit
+1502858554681	Delete element
+1502858641513	Rename type 'TesteEmbaralharInverso'
+1502858660742	Rename method 'embaralharPalavra'
+1502858685530	Rename method 'embaralhadorPalavra'
+1502858780184	Rename type 'TestesEmbaralharShuffle'
+1502858827871	Rename method 'embaralhaDorDePalavra'
+1502859043826	Delete element
+1502859046841	Delete element
+1502859655201	Delete element
+1502906330750	Rename type 'MecanicaDoJogoDificil'
+1502906359202	Rename type 'MecanicaDoJogoFacil'
+1502910464473	Rename local variable 'modoDeJogar'
+1502921102197	Delete element
+1502921280386	Rename method 'criarArquivoDePalavrasComplexas'
+1502996712001	Rename method 'verificaSeDesejaInserir'
+1503004583116	Move compilation unit
+1503004587632	Move compilation unit
+1503004590938	Move compilation unit
+1503004594571	Move compilation unit
+1503004987998	Delete elements
+1503178095218	Delete element
+1503179154115	Rename method 'faseBonificacao'

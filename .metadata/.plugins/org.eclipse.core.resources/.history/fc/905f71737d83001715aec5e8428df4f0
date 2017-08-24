@@ -1,0 +1,37 @@
+package com.leandroserra.console;
+
+import java.util.Scanner;
+
+import com.leandroserra.regra.de.negocio.ArquivoDePalavras;
+
+public class PrincipalMain {
+
+	public static void main(String[] args) {
+//		String palavra = "Araruama";
+//		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+//		System.out.println(ea.embaralhadorDePalavra(palavra));
+//		EmbaralhadorInverso ei = new EmbaralhadorInverso();		
+//		System.out.println(ei.embaralhadorDePalavra(palavra));	
+//		
+//		ArquivoDePalavras.criarArquivoDePalavras('C');
+//		ArquivoDePalavras.criarArquivoDePalavras('S');
+//		BancoDePalavras bp = new BancoDePalavras();
+//		System.out.println(bp.selecionarPalavraComRandom());
+//		FabricaEmbaralhadores fe = new FabricaEmbaralhadores();
+//		System.out.println(fe.embaralhadorAutomatico());	
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("JOGO DAS PALAVRAS EMBARALHADAS!\n");
+		
+		System.out.println("*********************************************");
+		System.out.println("*           **  ********   **               *");
+		System.out.println("*           **     **     *****             *");
+		System.out.println("*           **     **     ** **             *");
+		System.out.println("*********************************************");
+		
+		System.out.println("Deseja inserir palavras no banco de dados?");
+		System.out.println("1-Sim");
+		System.out.println("2-Não");
+	}
+
+}

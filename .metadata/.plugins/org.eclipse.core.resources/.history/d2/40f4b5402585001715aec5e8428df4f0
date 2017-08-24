@@ -1,0 +1,17 @@
+package com.leandroserra.fases;
+
+public class Fase implements IFase{
+
+//	@Override
+//	public int qtdDeAcertos(int fase) {
+//		
+//		return 2+fase;
+//	}
+
+	@Override
+	public int bonus(int fase) {
+	
+		return fase*10;
+	}
+
+}

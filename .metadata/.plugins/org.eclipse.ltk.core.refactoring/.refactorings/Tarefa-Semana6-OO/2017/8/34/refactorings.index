@@ -1,0 +1,11 @@
+1503318773468	Rename field 'bp'
+1503318864863	Rename field 'palavra'
+1503318881767	Rename field 'palavraInvertida'
+1503319237110	Rename field 'palavraComplexasInvertida'
+1503322940589	Rename field 'qtdPermitidoErrar'
+1503322971526	Rename field 'countPermitidoErrar'
+1503323536971	Encapsulate field 'qtdPermitidaDeErros'
+1503352343760	Rename method 'getIsFimDeJogo'
+1503366163085	Delete element
+1503366280177	Delete element
+1503366573852	Delete element

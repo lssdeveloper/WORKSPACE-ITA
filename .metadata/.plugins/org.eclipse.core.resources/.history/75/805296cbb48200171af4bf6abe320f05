@@ -1,0 +1,17 @@
+package com.leandroserra.regra.de.negocio;
+
+public class MecanicaDoJogoNivelEasy extends MecanicaDoJogo{
+		
+	@Override
+	public String getLogicaDoJogo() {
+		String modoDeJogar = "MODO DE JOGAR => EASY";
+		modoDeJogar+="Total de palavras: "+this.getTotalDePalavras()+"\n";
+		modoDeJogar+=" - A cada erro uma nova palavra é exibida.";
+		modoDeJogar+=" - Nível de dificuldade: "+this.embaralhador.nivelDeDificuldade();
+		return modoDeJogar;
+	}
+
+
+	
+
+}

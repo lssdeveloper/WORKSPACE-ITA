@@ -1,0 +1,8 @@
+1501788700231	Rename source folder 'teste'
+1501788706617	Move package
+1501788711452	Delete element
+1501788750629	Rename package 'livro_java_como_programar_pdf'
+1501793393165	Extract method 'ExibeMediaFinalDaClasse'
+1501793464097	Convert local variable 'totaldasNotas' to field
+1501793499807	Convert local variable 'mediaDasNotas' to field
+1501793571604	Convert local variable 'nmDeAlunos' to field

@@ -1,0 +1,8 @@
+package com.leandroserra.fases;
+
+public interface IFase {
+	
+//	public int qtdDeAcertos(int fase);
+	public int bonus(int fase);
+
+}

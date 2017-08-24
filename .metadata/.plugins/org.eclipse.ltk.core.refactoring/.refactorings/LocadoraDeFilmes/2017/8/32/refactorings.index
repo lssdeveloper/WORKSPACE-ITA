@@ -1,0 +1,4 @@
+1502150490093	Extract method 'calcularDataprevista'
+1502152700354	Rename field 'dataPrevistaDevolucao'
+1502152720043	Rename field 'dataRealDaDevolucao'
+1502153622575	Encapsulate field 'idade'

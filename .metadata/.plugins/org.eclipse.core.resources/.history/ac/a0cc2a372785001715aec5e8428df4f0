@@ -1,0 +1,25 @@
+package com.leandroserra.fases;
+
+public class Fase{
+
+	public static int faseBonificacao(int fase){
+		
+		int bonus = 0;
+		
+		switch (fase) {
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		default:
+			break;
+		}
+		return bonus;
+	}
+
+}

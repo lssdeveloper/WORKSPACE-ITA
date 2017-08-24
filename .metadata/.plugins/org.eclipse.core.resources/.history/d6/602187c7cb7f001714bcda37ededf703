@@ -1,0 +1,12 @@
+package com.leandroserra.tarefa;
+
+public class PrincipalMain {
+
+	public static void main(String[] args) {
+		
+		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+		System.out.println(ea.embaralhadorDePalavra("Leandro"));
+
+	}
+
+}

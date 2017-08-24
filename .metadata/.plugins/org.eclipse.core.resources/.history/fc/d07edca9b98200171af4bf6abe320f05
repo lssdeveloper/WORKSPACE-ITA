@@ -1,0 +1,25 @@
+package com.leandroserra.regra.de.negocio;
+
+public class MecanicaDoJogoNivelEasy extends MecanicaDoJogo{
+		
+	@Override
+	public String getLogicaDoJogo() {
+		return  "SE DIVIRTA ADIVINHANDO "
+						+this.getTotalDePalavras()
+						+" PALAVRAS EMBARALHADAS.";
+	
+	}
+
+	@Override
+	public String getModoDoJogo() {
+		return "MODO DE JOGAR => EASY";
+	}
+
+	@Override
+	public String getNivelDificuldade() {
+		
+		return "NÍVEL DE DIFICULDADE: "+this.embaralhador.nivelDeDificuldade();
+	}
+	
+
+}

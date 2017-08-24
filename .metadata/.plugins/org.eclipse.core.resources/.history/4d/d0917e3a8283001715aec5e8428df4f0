@@ -1,0 +1,15 @@
+package com.leandroserra.utilitarios;
+
+public class Utilitarios {
+
+	public static boolean simDesejaInserirPalavrasNoBanco(String str) {
+
+		if (str.equalsIgnoreCase("sim") || str.equals("1"))
+			return true;
+		else
+			return false;
+
+	}
+	
+
+}

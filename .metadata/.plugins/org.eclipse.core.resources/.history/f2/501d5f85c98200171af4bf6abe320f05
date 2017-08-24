@@ -1,0 +1,43 @@
+package com.leandroserra.teste;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.leandroserra.modelo.EmbaralhadorAleatorio;
+import com.leandroserra.modelo.EmbaralhadorInverso;
+import com.leandroserra.regra.de.negocio.BancoDePalavras;
+
+
+
+public class TesteImplementacaoDeEmbaralhador {
+	EmbaralhadorAleatorio ea;
+	EmbaralhadorInverso ei;
+	BancoDePalavras bpi, bpa;
+	String palavra, palavraInvertida;
+	
+	@Before
+	public void iniciar(){
+		ea = new EmbaralhadorAleatorio();
+		ei = new EmbaralhadorInverso();
+		bpa = new BancoDePalavras(ea);
+		palavra = bpa.selecionarPalavraComRandom();
+		palavraInvertida = ei.embaralhadorDePalavra(palavra);
+		
+		palavraInvertida = ei.embaralhadorDePalavra(palavra);
+	}
+	
+	@Test
+	public void embaralhadorAleatorio() {
+		assertNotEquals(palavra, ea.embaralhadorDePalavra(palavra));
+		System.out.println(palavra);
+	}
+	@Test
+	public void embaralhadorInversao() {
+		assertEquals(palavraInvertida, ei.embaralhadorDePalavra(palavra));
+		System.out.println(palavraInvertida);
+		System.out.println(palavra);
+	}	
+
+}

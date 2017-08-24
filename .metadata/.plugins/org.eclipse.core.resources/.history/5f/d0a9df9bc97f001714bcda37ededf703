@@ -1,0 +1,12 @@
+/* Interface que repreenta classes responsáveis por receber uma palavra
+ * e retornar ela embaralhada.
+ * Pelo menos duas implenetações deverão ser feitas
+ */
+
+package com.leandroserra.tarefa;
+
+public interface Embaralhador {
+	
+	public String embaralhaPalavra(String palavra);
+
+}

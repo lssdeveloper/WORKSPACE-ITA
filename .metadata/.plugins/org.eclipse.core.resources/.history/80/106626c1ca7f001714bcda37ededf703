@@ -1,0 +1,17 @@
+package com.leandroserra.tarefa;
+
+public class EmbaralhadorAleatorio implements IEmbaralhador {
+
+	@Override
+	public String embaralhadorDePalavra(String palavra) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int nivelDeDificuldade() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

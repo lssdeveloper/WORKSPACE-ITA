@@ -1,0 +1,61 @@
+package com.leandroserra.regra.de.negocio;
+
+public class MecanicaDoJogoNivelHard extends MecanicaDoJogo {
+
+
+	private final int QTDPERMITIDOERRAR = 3;
+	
+	public int getQtdPermitidoErrar(){
+		return this.QTDPERMITIDOERRAR;
+	}
+
+	@Override
+	public boolean getIsAssertivo(String palavra) {
+		if(palavraNoJogo.equalsIgnoreCase(palavra)){ 
+			this.getSomaPontuacao();
+			this.isAssertivo = true;
+			this.countDePalavras();
+		}
+		else{
+			this.isAssertivo = false;
+		}
+		this.statusDoJogo();
+		return this.isAssertivo;
+	}
+	
+	@Override
+	public void statusDoJogo(){
+		if (this.getCountPalavras() >= this.getTotalDePalavras())	
+			this.isFimDoJogo = true;
+		else
+			this.isFimDoJogo = false;
+	}	
+
+	@Override
+	public String getLogicaDoJogo() {
+		
+		return  "SE DIVIRTA ADIVINHANDO "
+				+"PALAVRAS COMPLEXAS EMBARALHADAS.";
+	}
+	
+	@Override
+	public void getReset(){
+		this.isAssertivo = false;
+		this.isNovaTentativa = true;
+	}
+
+	@Override
+	public String getModoDoJogo() {
+		
+		return "MODO DE JOGAR => HARD";
+	}
+
+	@Override
+	public String getNivelDificuldade() {
+		
+		return "NÍVEL DE DIFICULDADE: 10";
+	}
+
+	
+
+}

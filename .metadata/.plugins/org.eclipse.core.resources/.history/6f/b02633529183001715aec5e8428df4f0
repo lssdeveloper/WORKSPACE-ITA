@@ -1,0 +1,8 @@
+package com.leandroserra.regra.de.negocio;
+
+public interface IFase {
+	
+	public int qtdDeAcertos();
+	public int bonus();
+
+}

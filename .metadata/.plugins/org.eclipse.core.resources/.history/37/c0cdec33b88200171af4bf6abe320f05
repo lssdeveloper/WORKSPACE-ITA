@@ -1,0 +1,46 @@
+package com.leandroserra.console;
+
+import com.leandroserra.fabrica.FabricaEmbaralhadores;
+import com.leandroserra.modelo.EmbaralhadorAleatorio;
+import com.leandroserra.modelo.EmbaralhadorInverso;
+import com.leandroserra.regra.de.negocio.ArquivoDePalavras;
+import com.leandroserra.regra.de.negocio.BancoDePalavras;
+
+public class PrincipalMain {
+
+	public static void main(String[] args) {
+//		String palavra = "Araruama";
+//		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+//		System.out.println(ea.embaralhadorDePalavra(palavra));
+//		EmbaralhadorInverso ei = new EmbaralhadorInverso();		
+//		System.out.println(ei.embaralhadorDePalavra(palavra));	
+//		
+//		ArquivoDePalavras.criarArquivo();
+//		BancoDePalavras bp = new BancoDePalavras();
+//		System.out.println(bp.selecionarPalavraComRandom());
+//		FabricaEmbaralhadores fe = new FabricaEmbaralhadores();
+//		System.out.println(fe.embaralhadorAutomatico());	
+		
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("****************************************");
+		sb.append("******MODO EASY:");
+
+		sb.append("*************Teste 3");
+
+		sb.append("Teste 5");
+		sb.append("Teste 6");
+		sb.append("Teste 7");
+		sb.append("Teste 8");
+		sb.append("Teste 9");
+		
+		System.out.println(sb);
+//				+ 
+//                * ###########################################
+//                * INICIO BLOCO CONCATENAÇÃO COM StringBuilder
+//                * ###########################################
+//                * */");
+
+	}
+
+}

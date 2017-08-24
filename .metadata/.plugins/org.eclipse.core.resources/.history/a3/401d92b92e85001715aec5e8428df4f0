@@ -1,0 +1,15 @@
+package com.leandroserra.regra.de.negocio;
+
+public interface IMecanicaDoJogo {
+	boolean getIsFimDeJogo();
+	boolean getIsAssertivo(String palavra);
+	double getPontuacao();
+	boolean getIsNovaTentativa();
+	String getPalavraNoJogo();
+	String getLogicaDoJogo();
+	String getObjetivo();
+	String getModoDoJogo();
+	String getNivelDificuldade();
+	void getReset();
+	void getSomaPontuacao();
+}

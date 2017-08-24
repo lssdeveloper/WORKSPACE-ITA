@@ -1,0 +1,127 @@
+package com.leandroserra.console;
+import java.io.IOException;
+import java.util.Scanner;
+
+import com.leandroserra.fabrica.FabricaMecanicaDoJogo;
+import com.leandroserra.fases.Fase;
+import com.leandroserra.regra.de.negocio.ArquivoDePalavras;
+import com.leandroserra.regra.de.negocio.IMecanicaDoJogo;
+import com.leandroserra.utilitarios.Utilitarios;
+
+public class Principal {
+
+	public static void main(String[] args) throws java.nio.file.NoSuchFileException, IOException {
+				
+		FabricaMecanicaDoJogo fabricaMecanicaDoJogo = new  FabricaMecanicaDoJogo();
+		IMecanicaDoJogo MecanicaDoJogo = fabricaMecanicaDoJogo.embaralhadorAutomatico();
+		Scanner s = new Scanner(System.in);
+		System.out.println("JOGO DAS PALAVRAS EMBARALHADAS!\n");
+		
+		System.out.println("*******************************************");
+		System.out.println("*           **  ********   **             *");
+		System.out.println("*           **     **     *****           *");
+		System.out.println("*           **     **     ** **           *");
+		System.out.println("*******************************************");
+		
+		System.out.println("Deseja inserir palavras no banco de dados?");
+		System.out.println("1-Sim 2-Não");
+		
+		String str = s.nextLine();
+		if (Utilitarios.simDesejaInserirPalavrasNoBanco(str)) {
+			System.out.println("Para palavras Complexas digite > C ou 2 para sair.");
+			if (Utilitarios.palavrasComplexas(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+			System.out.println("Para palavras Simples   digite > S ou 2 para sair.");
+			if (Utilitarios.palavrasSimples(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+
+		}
+				
+		System.out.println("\n"+MecanicaDoJogo.getObjetivo()+"\n");
+		System.out.println("\n"+MecanicaDoJogo.getModoDoJogo()+"\n");
+		System.out.println(MecanicaDoJogo.getLogicaDoJogo());
+		System.out.println(MecanicaDoJogo.getNivelDificuldade());
+		
+		boolean isPalavraCerta =  false;
+		int pontuacao = 0;
+		for (int i = 0; i < 4; i++) {
+			int fase = i;
+			int acertos = 0;
+			int erros = 0;
+			int bonus = 0;
+			pontuacao+=bonus;
+			if (fase==3) 
+				System.out.println("Concentre-se está é a última fase!");
+			
+			for (int j = 0; j < 20; j++) {
+				String palavra = MecanicaDoJogo.getPalavraNoJogo();
+				String pCorreta = MecanicaDoJogo.getPalavraCorreta();
+				System.out.println("****** Retirar ******" +pCorreta);
+				System.out.println("Acerte qual a palavra embaralhada: " + palavra+"\n");
+				str = s.nextLine();
+				isPalavraCerta = MecanicaDoJogo.getIsAssertivo(str);
+				if (isPalavraCerta) {
+					acertos++;
+					//pontuacao += MecanicaDoJogo.getPontuacao();
+					System.out.println("Parabéns essa palavra você acertou! " + MecanicaDoJogo.getPontuacao() +" pts");
+				
+					if (fase == 0) {
+						if ((acertos == 4)) {
+							System.out.println("Parabéns concluiu a primeira fase.");
+							pontuacao*=Fase.bonificacao(fase);
+							j = 20;
+							System.out.println("Como bônus seus pontos serão multiplicados por "+Fase.bonificacao(fase));
+							System.err.println("Você acumulou na 1 ª fase "+pontuacao+ " pontos");
+						}		
+					}
+					if (fase == 1) {
+						if ((acertos == 5)) {
+							System.out.println("Parabéns concluiu a segunda fase.");
+							pontuacao*=Fase.bonificacao(fase);							
+							j = 20;
+							System.out.println("Como bônus seus pontos serão multiplicados por "+Fase.bonificacao(fase));
+							System.err.println("Você acumulou na 2 ª fase "+pontuacao+ " pontos");
+						}
+					}
+					if (fase == 2) {
+						if ((acertos == 6)) {
+							System.out.println("Parabéns concluiu a terceira fase.");
+							pontuacao*=Fase.bonificacao(fase);						
+							j = 20;
+							System.out.println("Como bônus seus pontos serão multiplicados por "+Fase.bonificacao(fase));
+							System.err.println("Você acumulou na 3 ª fase "+pontuacao+ " pontos");
+						}
+					}
+					if (fase == 3) {
+						if ((acertos == 7)) {
+							System.out.println("Parabéns concluiu a última fase, VOCÊ É O VENCEDOR!");
+							pontuacao*=Fase.bonificacao(fase);							
+							j = 20;
+							System.out.println("Como bônus seus pontos serão multiplicados por "+Fase.bonificacao(fase));
+						}
+					}
+
+				}else if (!isPalavraCerta) {
+					erros++;
+					System.out.println("Infelizmente, essa palavra você errou.");	
+					if ((fase==0)&&(erros<=5) || (fase==1)&&(erros<=4) || (fase==2)&&(erros<=3) 
+							|| (fase==3)&&(erros<=2)) {
+						System.out.println("Ok, nova tentativa!");
+
+					}else{
+						System.out.println("FIM DE JOGO, infelizmente você perdeu!");
+						j=20;
+						i=5;
+					}
+
+				}
+			}
+		}
+		System.err.println("Sua pontuação final é => "+ pontuacao);		
+	}
+
+		
+
+
+
+}

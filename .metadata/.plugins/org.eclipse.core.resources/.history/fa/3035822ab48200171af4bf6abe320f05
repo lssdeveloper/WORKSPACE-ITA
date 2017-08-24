@@ -1,0 +1,95 @@
+package com.leandroserra.regra.de.negocio;
+
+public class MecanicaDoJogoNivelHard extends MecanicaDoJogo {
+
+	private int qtdDePalavrasErradas = 1;
+	private int countPalavrasErradas = 0;
+	private int qtdPermitidoErrar = 3;
+	private int countPermitidoErrar = 0;
+	
+
+	public void incrementarCountPalavrasErradas(){
+		this.countPalavrasErradas++;
+	}
+	
+	public void incrementarCountPermitidoErrar(){
+		this.countPermitidoErrar++;
+	}
+		
+	public int getCountPalavrasErradas(){
+		return this.countPalavrasErradas;
+	}
+	
+	public int getCountPermitidoErrar(){
+		return this.countPermitidoErrar;
+	}
+	
+
+	public int getQtdDePalavrasErradas(){
+		return this.qtdDePalavrasErradas;
+	}
+	
+	public int getQtdPermitidoErrar(){
+		return this.qtdPermitidoErrar;
+	}
+	public void statusNovaTentativa(){
+		if( this.getCountPalavrasErradas()<= this.getQtdDePalavrasErradas() 
+			&& this.getCountPermitidoErrar() <= this.getQtdPermitidoErrar()	
+			&& !this.isAssertivo	)
+			
+			this.isNovaTentativa = true;
+		else
+			this.isNovaTentativa = false;
+	}
+	@Override
+	public boolean getIsAssertivo(String palavra) {
+		if(palavraNoJogo.equalsIgnoreCase(palavra)){ 
+			this.getSomaPontuacao();
+			this.isAssertivo = true;
+			this.countDePalavras();
+		}
+		else{
+			this.incrementarCountPalavrasErradas();
+			this.incrementarCountPermitidoErrar();
+			this.isAssertivo = false;
+		}
+		this.statusNovaTentativa();
+		this.statusDoJogo();
+		return this.isAssertivo;
+	}
+	
+	@Override
+	public void statusDoJogo(){
+		if (this.getCountPalavras() >= this.getTotalDePalavras()
+			|| this.getCountPermitidoErrar() >= this.getQtdPermitidoErrar()	
+				)
+			this.isFimDoJogo = true;
+		else
+			this.isFimDoJogo = false;
+	}	
+
+	@Override
+	public String getLogicaDoJogo() {
+		String modoDeJogar = "Modo de Jogar: Hard\n";
+		modoDeJogar+="Total de palavras: "+this.getTotalDePalavras();
+		modoDeJogar+=" - Total de erros permitidos: "+this.getQtdPermitidoErrar();
+		modoDeJogar+=" - Total de erros por palavras: "+this.getQtdDePalavrasErradas();
+		modoDeJogar+=" - Nível de dificuldade: "+this.embaralhador.nivelDeDificuldade();
+		return modoDeJogar;
+	}
+	
+	@Override
+	public void getReset(){
+		this.isAssertivo = false;
+		this.countPalavrasErradas = 0;
+		this.isNovaTentativa = true;
+	}
+		
+	@Override
+	public String getObjetivo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

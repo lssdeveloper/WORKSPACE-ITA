@@ -1,0 +1,17 @@
+package com.leandroserra.utilitarios;
+
+public class Utilitarios {
+	
+	public boolean verificaSeDesejaInserir(String str){
+		
+		if (str.equalsIgnoreCase("sim") || str.equals("1")) return true;
+				
+		else
+			
+		return false;
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.leandroserra.regra.de.negocio;
+
+public interface IFase {
+
+}

@@ -1,0 +1,125 @@
+package com.leandroserra.console;
+
+import java.util.Scanner;
+
+import org.junit.rules.Verifier;
+
+import com.leandroserra.regra.de.negocio.ArquivoDePalavras;
+import com.leandroserra.utilitarios.Utilitarios;
+
+public class PrincipalMain {
+
+	public static void main(String[] args) {
+//		String palavra = "Araruama";
+//		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+//		System.out.println(ea.embaralhadorDePalavra(palavra));
+//		EmbaralhadorInverso ei = new EmbaralhadorInverso();		
+//		System.out.println(ei.embaralhadorDePalavra(palavra));	
+//		
+//		ArquivoDePalavras.criarArquivoDePalavras('C');
+//		ArquivoDePalavras.criarArquivoDePalavras('S');
+//		BancoDePalavras bp = new BancoDePalavras();
+//		System.out.println(bp.selecionarPalavraComRandom());
+//		FabricaEmbaralhadores fe = new FabricaEmbaralhadores();
+//		System.out.println(fe.embaralhadorAutomatico());	
+		
+/*		Scanner s = new Scanner(System.in);
+		System.out.println("JOGO DAS PALAVRAS EMBARALHADAS!\n");
+		
+		System.out.println("*********************************************");
+		System.out.println("*           **  ********   ***              *");
+		System.out.println("*           **     **     *****             *");
+		System.out.println("*           **     **     ** **             *");
+		System.out.println("*********************************************");
+		
+		System.out.println("Deseja inserir palavras no banco de dados?");
+		System.out.println("Digite 1-Sim ou 2-Não");
+		String str = s.nextLine();
+		if (Utilitarios.simDesejaInserirPalavrasNoBanco(str)) {
+			System.out.println("Para palavras Complexas digite > C ou 2 para sair.");
+			if (Utilitarios.palavrasComplexas(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+			System.out.println("Para palavras Simples   digite > S ou 2 para sair.");
+			if (Utilitarios.palavrasSimples(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+
+		}*/
+		//3 fases
+		// fase 0 = 4 acertos e 5 erros 3 novas tentaivas
+		// fase 1 = 5 acertos e 4 erros 2 novas tentaivas
+		// fase 2 = 6 acertos e 3 erros 1 novas tentaivas
+		// fase 3 = 7 acertos e 2 erros 0 novas tentaivas	
+		Scanner s = new Scanner(System.in);
+		boolean isPalavraCerta =  false;
+		int pontuacao = 0;
+		for (int i = 0; i < 4; i++) {
+			int fase = i;
+			int acertos = 0;
+			int erros = 0;
+			int tentativas = 0;
+			int bonus = 0;
+			pontuacao+=bonus;
+			
+			for (int j = 0; j < 20; j++) {
+				System.out.println("Informe true ou false para palavra certa:");				
+				isPalavraCerta = s.nextBoolean();
+				if (isPalavraCerta) {
+					acertos++;
+					pontuacao += 10;
+					System.out.println("Parabéns essa palavra você acertou! " + pontuacao +" pts");
+				
+					if (fase == 0) {
+						if ((acertos == 4)) {
+							System.out.println("Parabéns concluiu a primeira fase.");
+							bonus = 10;
+							pontuacao*=bonus;
+							j = 20;
+							System.out.println("Como bônus seus pontos serão multiplicados por "+bonus);
+							System.err.println("Você acumulou na fase "+i+" "+pontuacao+ " pontos");
+						}		
+					}
+					if (fase == 1) {
+						if ((acertos == 5)) {
+							System.out.println("Parabéns concluiu a segunda fase.");
+							bonus = 20;
+							pontuacao*=bonus;							
+							j = 20;
+						}
+					}
+					if (fase == 2) {
+						if ((acertos == 6)) {
+							System.out.println("Parabéns concluiu a terceira fase.");
+							bonus = 30;
+							pontuacao*=bonus;							
+							j = 20;
+						}
+					}
+					if (fase == 3) {
+						if ((acertos == 7)) {
+							System.out.println("Parabéns concluiu a última fase, VOCÊ É O VENCEDOR!");
+							bonus = 40;
+							pontuacao*=bonus;							
+							j = 20;
+						}
+					}
+
+				}else if (!isPalavraCerta) {
+					erros++;
+					System.out.println("Infelizmente, essa palavra você errou.");	
+					if ((fase==0)&&(erros<=5) || (fase==1)&&(erros<=4) || (fase==2)&&(erros<=3) 
+							|| (fase==3)&&(erros<=2)) {
+						System.out.println("Ok, nova tentativa!");
+						tentativas++;
+					}else{
+						System.out.println("FIM DE JOGO, infelizmente você perdeu!");
+						j=20;
+						i=5;
+					}
+
+				}
+			}
+		}
+		System.out.println("Sua pontuação final é => "+ pontuacao);		
+	}
+
+}

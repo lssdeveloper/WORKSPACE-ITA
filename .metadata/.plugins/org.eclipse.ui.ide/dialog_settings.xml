@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/leandro/workspace ita/Tarefa-Semana6-OO"/>
+		<item value="/home/leandro/workspace ita/ITA_OOJ_S6_Tarefa_2"/>
+		<item value="/home/leandro/workspace ita/ITA_OOJ_S6_Tarefa_1"/>
+		<item value="/home/leandro/workspace ita/Tarefa-Semana4-TDD"/>
+		<item value="/home/leandro/workspace ita/Gamificacao II"/>
+		<item value="/home/leandro/workspace ita/Gamificacao I"/>
+		<item value="/home/leandro/workspace ita/Diferentes-tipos-de-produto-master"/>
+		<item value="/home/leandro/workspace ita/caixaEletronicoITA-master"/>
+		<item value="/home/leandro/workspace ita/Curso de TDD/Semana 2/SAB"/>
+		<item value="/home/leandro/workspace ita/Tradutor"/>
+		<item value="/home/leandro/workspace ita/CalculoDoIMC"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/leandro/workspace ita/Tarefa-Semana4-TDD - OLD"/>
+			<item value="/home/leandro/workspace ita/Tarefa-Semana4-TDD"/>
+			<item value="/home/leandro/workspace ita/Diferentes-tipos-de-produto-master"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.obeonetwork.dsl.uml2.design.doc.TravelAgencyWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Examples/org.obeonetwork.dsl.uml.examples.category"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.wst.xml.examples"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="FilterByLocation"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/Tarefa-Semana6-OO-Exemplo-T1/src/logica/MecanicaDoJogoDificil.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/MecanicaDoJogoNivelHard.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/MecanicaDoJogoNivelEasy.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="384" key="DIALOG_X_ORIGIN"/>
+			<item value="38" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

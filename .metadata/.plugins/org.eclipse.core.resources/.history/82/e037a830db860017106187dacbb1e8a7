@@ -1,0 +1,53 @@
+package com.leandroserra.console;
+
+import java.util.Scanner;
+
+import com.leandroserra.regra.de.negocio.ArquivoDePalavras;
+import com.leandroserra.utilitarios.Utilitarios;
+
+public class PrincipalMain {
+
+	public static void main(String[] args) {
+//		String palavra = "Araruama";
+//		EmbaralhadorAleatorio ea = new EmbaralhadorAleatorio();
+//		System.out.println(ea.embaralhadorDePalavra(palavra));
+//		EmbaralhadorInverso ei = new EmbaralhadorInverso();		
+//		System.out.println(ei.embaralhadorDePalavra(palavra));	
+//		
+//		ArquivoDePalavras.criarArquivoDePalavras('C');
+//		ArquivoDePalavras.criarArquivoDePalavras('S');
+//		BancoDePalavras bp = new BancoDePalavras();
+//		System.out.println(bp.selecionarPalavraComRandom());
+//		FabricaEmbaralhadores fe = new FabricaEmbaralhadores();
+//		System.out.println(fe.embaralhadorAutomatico());	
+		
+		
+		System.out.println("\n\n\n");
+		System.out.println("*************************************************");
+		System.out.println(" PONTUAÇÃO FINAL ====> 10000000 pontos    ");
+		System.out.println("*************************************************");	
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("JOGO DAS PALAVRAS EMBARALHADAS!\n");
+		
+		System.out.println("*********************************************");
+		System.out.println("*           **  ********   ***              *");
+		System.out.println("*           **     **     *****             *");
+		System.out.println("*           **     **     ** **             *");
+		System.out.println("*********************************************");
+		
+		System.out.println("Deseja inserir palavras no banco de dados?");
+		System.out.println("Digite 1-Sim ou 2-Não");
+		String str = s.nextLine();
+		if (Utilitarios.simDesejaInserirPalavrasNoBanco(str)) {
+			System.out.println("Para palavras Complexas digite > C ou 2 para sair.");
+			if (Utilitarios.palavrasComplexas(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+			System.out.println("Para palavras Simples   digite > S ou 2 para sair.");
+			if (Utilitarios.palavrasSimples(s.nextLine()))
+				ArquivoDePalavras.criarArquivoDePalavras('C');
+
+		}
+
+	}
+}

@@ -1,0 +1,10 @@
+1501528947366	Encapsulate field 'name'
+1501530588116	Extract method 'getAmount'
+1501531260331	Delete element
+1501532009325	Extract method 'getFrequentRenterPoints'
+1501532601673	Move method 'getFrequentRenterPoints'
+1501532684825	Move method 'getAmount'
+1501532870689	Move method 'getFrequentRenterPoints'
+1501532914574	Move method 'getAmount'
+1501539315142	Inline local variable 'thisAmount'
+1501544387988	Infer generic type arguments
